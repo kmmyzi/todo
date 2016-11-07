@@ -43,10 +43,12 @@ $(function(){
 	  var index=$(this).index();
 	  var p=e.originalEvent.changedTouches[0].clientX;
 	  if(p-stratP>50){
+	  		$(this).preventDefault();
 	  	    arr[index].state=1;
 		    $(this).addClass("done");
 	  }
 	  if(p-stratP<-50){	 
+	  		$(this).preventDefault();
 	  	    arr[index].state=0;
 		    $(this).removeClass("done");
 	  }
